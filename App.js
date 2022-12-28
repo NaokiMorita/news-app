@@ -1,24 +1,18 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { ListItem } from './components/ListItem';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.itemContainer}>
-        <View style={styles.leftContainer}>
-        <Image
-          source={{uri: 'https://picsum.photos/200'}}
-          style={{width: 100, height: 100}}
-          />
-        </View>
-        <View style={styles.rightContainer}>
-          <Text numberOfLines={3} style={styles.article}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
-          <Text style={styles.sourceFrom}>React news</Text>
-        </View>
-      </View>  
+      <ListItem 
+        ImageUrl="https://picsum.photos/200"
+        article="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        author="sample news" 
+        
+        />
     </View>
   );
 }
